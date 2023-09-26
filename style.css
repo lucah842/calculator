@@ -1,0 +1,80 @@
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.calculator {
+    background-color: #f3f4f5;
+    border: 1px solid #d1d1d1;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: right;
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#display {
+    width: 94%;
+    height: 80px;
+    margin: 0 auto; /* Center horizontally */
+    margin-bottom: 10px;
+    font-size: 36px;
+    text-align: right;
+    padding-right: 15px;
+    background-color: #fff;
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 20px;
+    font-size: 24px;
+    border: none;
+    background-color: #e4e4e4;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #d2d2d2;
+}
+
+/* Orange color for the equal button */
+button:nth-child(16) {
+    background-color: #f5923e;
+    color: #fff;
+}
+
+button:nth-child(16):hover {
+    background-color: #db8230;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .calculator {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    #display {
+        height: 60px; /* Reduce height for smaller screens */
+    }
+
+    button {
+        padding: 15px; /* Reduce padding for smaller screens */
+        font-size: 20px; /* Reduce font size for smaller screens */
+    }
+}
